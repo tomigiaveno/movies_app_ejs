@@ -1,12 +1,21 @@
 const express = require("express");
 
+
+// API Router
+
+const apiRouter = require("./api/api-routes");
+
+
 const app = express();
+
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-    res.json({ message: "welcome to the API"});
-});
+app.use(express.json());
+
+
+
+app.use("/api/movies", apiRouter); 
 
 app.listen(PORT, () => {
     console.log(`server is running on port ${PORT}.`);

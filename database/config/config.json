@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "Tomas",
+    "password": "7A91xsw2-",
+    "database": "movies_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+      }
+    }
+
