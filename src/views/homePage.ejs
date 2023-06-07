@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/homePage.css" />
+    <title>Movies Home</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Movies Home</h1>
+      <button class="add-movie-button">
+        <a href="/movies/create">Add New Movie</a>
+      </button>
+    </div>
+
+    <ul>
+      <% movies.forEach(movie => { %>
+      <li>
+        <a href="/movies/details/<%= movie.id %>">
+          <div>
+            <h3><%= movie.title %></h3>
+            <p>Rating: <%= movie.rating %></p>
+            <p>Release Date: <%= movie.releaseDate %></p>
+            <p>Awards: <%= movie.awards %></p>
+            <p>Genre: <%= movie.genre %></p>
+          </div></a
+        >
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
