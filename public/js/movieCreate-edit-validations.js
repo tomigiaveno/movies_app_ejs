@@ -18,7 +18,7 @@ $(document).ready(function () {
     releaseDateError.text("");
     lengthError.text("");
 
-    const isValid = true;
+    let isValid = true;
 
     // Title validation
     if (titleInput.val().trim() === "") {
